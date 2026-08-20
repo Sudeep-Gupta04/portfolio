@@ -63,7 +63,7 @@ html {
 }
 
 body {
-  cursor: none;
+  cursor: auto;
   background-color: var(--bg-base);
   color: var(--text-primary);
   font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
@@ -88,7 +88,14 @@ section, article, nav, header, footer, div {
 }
 
 a, button {
-  cursor: none;
+  cursor: auto;
+}
+
+/* Hide default cursor only on devices with a mouse (fine pointer) */
+@media (pointer: fine) {
+  body, a, button {
+    cursor: none;
+  }
 }
 
 /* Smooth scroll overrides for Lenis */

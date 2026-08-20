@@ -39,12 +39,12 @@ export default function TypewriterBubble({
 
   return (
     <motion.div
-      className="absolute left-1/2 z-20 -translate-x-1/2 rounded-full bg-[#4FB8E8] px-7 py-4 text-sm font-extrabold uppercase tracking-[0.12em] text-white shadow-[0_18px_45px_rgba(79,184,232,0.28)] md:text-base"
+      className="absolute left-1/2 z-30 -translate-x-1/2 rounded-full bg-[#4FB8E8] px-5 py-3 text-xs font-extrabold uppercase tracking-[0.12em] text-white shadow-[0_18px_45px_rgba(79,184,232,0.28)] sm:px-7 sm:py-4 sm:text-sm md:text-base"
       initial={{ opacity: 0, scale: 0.82, y: 18 }}
       animate={{
         opacity: isVisible ? 1 : 0,
         scale: isVisible ? 1 : 0.96,
-        top: isAbove ? "calc(50% - 155px)" : "calc(50% + 92px)",
+        top: isAbove ? "calc(50% - 120px)" : "calc(50% + 60px)",
         y: isVisible ? 0 : 10,
       }}
       transition={{ duration: 0.55, ease: [0.76, 0, 0.24, 1] }}

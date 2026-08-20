@@ -10,13 +10,14 @@ export default function CustomCursor() {
   const [cursorLabel, setCursorLabel] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   const rawX = useMotionValue(-100);
   const rawY = useMotionValue(-100);
 
   // Main dot — fast
   const dotX = useSpring(rawX, { stiffness: 1200, damping: 40, mass: 0.2 });
-  const dotY = useSpring(rawY, { stiffness: 1200, damping: 40, mass: 0.2 });
+  const dotY = useSpring(rawX, { stiffness: 1200, damping: 40, mass: 0.2 });
 
   // Ring / blob — slower, lags behind
   const ringX = useSpring(rawX, { stiffness: 180, damping: 22, mass: 0.6 });
@@ -28,7 +29,22 @@ export default function CustomCursor() {
 
   const clickTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Detect touch device on mount
   useEffect(() => {
+    const checkTouch = () => {
+      const isTouch =
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia("(pointer: coarse)").matches;
+      setIsTouchDevice(isTouch);
+    };
+    checkTouch();
+  }, []);
+
+  useEffect(() => {
+    // Don't set up any listeners on touch devices
+    if (isTouchDevice) return;
+
     const checkTheme = () => {
       setIsDark(document.documentElement.getAttribute("data-theme") === "dark");
     };
@@ -53,7 +69,6 @@ export default function CustomCursor() {
 
       if (link) {
         setCursorState("hover");
-        // Try to get a short label from the link text or aria-label
         const text = link.getAttribute("aria-label") || link.innerText?.trim() || "";
         const label = text.length > 0 && text.length < 16 ? text : "View";
         setCursorLabel(label);
@@ -97,7 +112,10 @@ export default function CustomCursor() {
       observer.disconnect();
       if (clickTimeout.current) clearTimeout(clickTimeout.current);
     };
-  }, [rawX, rawY, isVisible]);
+  }, [rawX, rawY, isVisible, isTouchDevice]);
+
+  // Don't render anything on touch devices
+  if (isTouchDevice) return null;
 
   const isHovering = cursorState === "hover";
   const isClicking = cursorState === "click";

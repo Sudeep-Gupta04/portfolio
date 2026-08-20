@@ -6,14 +6,14 @@ import { useEffect } from "react";
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.35,
+      duration: 1.8,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      syncTouch: true,
-      wheelMultiplier: 0.9,
-      touchMultiplier: 2,
+      syncTouch: false,
+      wheelMultiplier: 0.75,
+      touchMultiplier: 1.5,
     });
 
     let frameId = 0;
@@ -26,7 +26,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     const handleScrollTo = (event: Event) => {
       const { target } = (event as CustomEvent<{ target: string }>).detail;
       lenis.scrollTo(target, {
-        duration: 1.25,
+        duration: 1.6,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       });
     };

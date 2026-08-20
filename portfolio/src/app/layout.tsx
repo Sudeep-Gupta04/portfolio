@@ -14,8 +14,48 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sudeep Gupta - Portfolio",
-  description: "Software Engineer Portfolio",
+  title: "Sudeep Gupta - Software Engineer Portfolio",
+  description:
+    "Full-stack developer & AI researcher building practical software across systems, integrations, and research-led security. Based in Gandhinagar, Gujarat.",
+  keywords: [
+    "Sudeep Gupta",
+    "Software Engineer",
+    "Full Stack Developer",
+    "Portfolio",
+    "React",
+    "Spring Boot",
+    "AI",
+    "Machine Learning",
+  ],
+  authors: [{ name: "Sudeep Gupta" }],
+  openGraph: {
+    title: "Sudeep Gupta - Software Engineer Portfolio",
+    description:
+      "Full-stack developer & AI researcher building practical software.",
+    url: "https://sudeep-gupta04-portfolio.vercel.app",
+    siteName: "Sudeep Gupta Portfolio",
+    images: [
+      {
+        url: "/profile.png",
+        width: 800,
+        height: 1067,
+        alt: "Sudeep Gupta - Software Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sudeep Gupta - Software Engineer Portfolio",
+    description:
+      "Full-stack developer & AI researcher building practical software.",
+    images: ["/profile.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
