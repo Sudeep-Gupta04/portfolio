@@ -1,0 +1,16 @@
+# Ignore media recordings and screenshots in workspace root
+*.mp4
+*.png
+*.pdf
+
+# Ignore node_modules and builds in portfolio subfolder
+portfolio/node_modules/
+portfolio/.next/
+portfolio/out/
+portfolio/build/
+portfolio/next-env.d.ts
+portfolio/*.tsbuildinfo
+
+# Ignore debug logs
+*debug.log*
+yarn-error.log*

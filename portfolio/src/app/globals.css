@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ===== CSS Variables — Light Mode ===== */
+:root {
+  --bg-base:       #ece8e4;
+  --bg-hero:       #F0EEE4;
+  --bg-card:       #f7f1ed;
+  --bg-dark:       #1d1d1d;
+  --bg-teal:       #d8ebe8;
+  --bg-achievements: #f7f1ed;
+  --accent-yellow: #f1d85f;
+  --accent-orange: #c95d3a;
+  --text-primary:  #1e1e1e;
+  --text-on-dark:  #f7f1ed;
+  --border-light:  rgba(30,30,30,0.15);
+  --border-dark:   rgba(247,241,237,0.12);
+  --grid-line:     rgba(30,30,30,0.04);
+  --dot-light:     rgba(30,30,30,0.13);
+  --dot-dark:      rgba(255,255,255,0.08);
+  --trans-duration: 0.35s;
+}
+
+/* ===== CSS Variables — Dark Mode ===== */
+[data-theme="dark"] {
+  --bg-base:       #191714;
+  --bg-hero:       #1c1a16;
+  --bg-card:       #252118;
+  --bg-dark:       #0f0e0c;
+  --bg-teal:       #1a2422;
+  --bg-achievements: #1f1c17;
+  --accent-yellow: #f1d85f;
+  --accent-orange: #e07050;
+  --text-primary:  #e8e2d8;
+  --text-on-dark:  #e8e2d8;
+  --border-light:  rgba(232,226,216,0.12);
+  --border-dark:   rgba(232,226,216,0.10);
+  --grid-line:     rgba(232,226,216,0.04);
+  --dot-light:     rgba(232,226,216,0.08);
+  --dot-dark:      rgba(232,226,216,0.06);
+}
+
+/* ===== Grid pattern utilities ===== */
+@utility bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+@utility bg-cross-pattern {
+  background-image: radial-gradient(circle, var(--dot-light) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@utility bg-dot-pattern {
+  background-image: radial-gradient(circle, var(--dot-dark) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* ===== Base styles ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: none;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color var(--trans-duration) ease,
+    color var(--trans-duration) ease;
+}
+
+/* All sections inherit smooth bg transitions */
+section, article, nav, header, footer, div {
+  transition:
+    background-color var(--trans-duration) ease,
+    border-color var(--trans-duration) ease,
+    color var(--trans-duration) ease;
+}
+
+::selection {
+  background: var(--accent-yellow);
+  color: #1e1e1e;
+}
+
+a, button {
+  cursor: none;
+}
+
+/* Smooth scroll overrides for Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ===== Dark mode section overrides ===== */
+[data-theme="dark"] .section-beige {
+  background-color: var(--bg-base) !important;
+}
+[data-theme="dark"] .section-yellow {
+  background-color: #2a2400 !important;
+}
+
+/* ===== Dark mode scrollbar ===== */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Custom cursor glow in dark mode */
+[data-theme="dark"] .cursor-main {
+  background: var(--accent-yellow);
+  box-shadow: 0 0 18px 4px rgba(241, 216, 95, 0.4);
+}
+[data-theme="dark"] .cursor-ring {
+  border-color: rgba(241, 216, 95, 0.35);
+}

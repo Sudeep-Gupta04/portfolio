@@ -1,0 +1,48 @@
+Sudeep Gupta
+Gandhinagar, Gujarat
+♂phone+91 7000990349 ✉ sudeepkgupta2001@gmail.com /linkedinLinkedIn /githubGitHub
+/codeGeeksforGeeks /codeLeetCode
+EDUCATION
+IIIT Vadodara – Indian Institute of Information Technology Vadodara (Aug 2023 – Present)
+B.Tech in Information Technology — CGPA: 8.52/10 (Till 6 th semester)
+Class XII – CBSE (July 2022) : 87.4% Class X – CBSE (July 2020) : 89.6%
+Experience
+Indian Institute of Information Technology Vadodara Research Intern
+Research Intern 5
+• Enhanced physical layer security for IoT networks using an RIS-mounted UAV to mitigate eavesdropping
+attacks.
+• Formulated an average secrecy-rate maximization model optimizing UAV flight trajectories, RIS phase
+shifts, and transmit power.
+• Deployed Reinforcement Learning (TD3) for dynamic trajectory and signal adaptation, achieving a peak
+secrecy rate of 8.5 bits/s/Hz.
+• Benchmarked against standard baselines, demonstrating a 40% higher average secrecy rate in dense
+eavesdropper environments.
+PROJECTS
+SkillRoute – AI-Powered Personalized Learning Platform [GitHub]
+Spring Boot, MySQL, React, Tailwind CSS, Redis, JWT, GenAI (GPT APIs)
+• Delivered GenAI-curated resources for roadmap topics with 1000+ YouTube videos and articles.
+• Generated 500+ adaptive quizzes using GPT-powered APIs for personalized assessments.
+• Built a Reddit-style forum with voting, filtering, and Redis caching for fast UX.
+• Secured user data with JWT authentication and role-based access control.
+Profit Pilot – Price Forecasting and Inventory Optimization [GitHub]
+React.js, Express.js, MongoDB, ML Libraries
+• Integrated ML-powered price prediction models with a responsive React dashboard via REST APIs.
+• Built an interactive UI for real-time inventory tracking, demand trends, and pricing suggestions.
+• Engineered a full-stack pipeline enabling dynamic pricing based on expiry and market analytics.
+BidBazaar – Online Auction Platform for Transparent Product Bidding [GitHub]
+Spring Boot, MySQL, React.js, REST API
+• Built a full-stack auction system enabling 50+ users to bid on products via real-time auctions.
+• Designed a normalized MySQL schema for users, bids, listings, transactions, and their relationships.
+• Integrated Spring Boot APIs with a responsive React UI for live bidding and product tracking.
+TECHNICAL SKILLS
+Languages & Tools: Java, C, JavaScript, SQL, Git, GitHub, Postman, VS Code, IntelliJ IDEA, Vite
+AI Tools: Cursor, GitHub Copilot, Claude, ChatGPT, Prompt Engineering, LLM API Integration
+Coursework: Data Structures & Algorithms, OOP, Operating Systems, DBMS, Computer Networks, Cloud
+System Management, Information Security, Software Engineering
+Frameworks: Spring Boot, Spring Security, Spring JPA, Hibernate, React
+Databases: MySQL, PostgreSQL, MongoDB, Redis, Firebase
+ACHIEVEMENTS
+• Solved 1400+ coding problems across platforms with a 1700+ LeetCode rating , ranking in the top 10%.
+• Ranked 91st on GeeksforGeeks among 1800+ registered students of IIIT Vadodara.
+• Secured Rank 1778 in LeetCode Biweekly Contest 189 among over 46,000 participants.
+• Secured Rank 1826 in LeetCode Biweekly Contest 185 among over 40,000 participants.
