@@ -17,7 +17,7 @@ export default function CustomCursor() {
 
   // Main dot — fast
   const dotX = useSpring(rawX, { stiffness: 1200, damping: 40, mass: 0.2 });
-  const dotY = useSpring(rawX, { stiffness: 1200, damping: 40, mass: 0.2 });
+  const dotY = useSpring(rawY, { stiffness: 1200, damping: 40, mass: 0.2 });
 
   // Ring / blob — slower, lags behind
   const ringX = useSpring(rawX, { stiffness: 180, damping: 22, mass: 0.6 });
