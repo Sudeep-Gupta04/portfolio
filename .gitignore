@@ -1,7 +1,9 @@
-# Ignore media recordings and screenshots in workspace root
+# Ignore media recordings in workspace root
 *.mp4
-*.png
 *.pdf
+
+# Ignore root-level images only (not portfolio assets)
+/image.png
 
 # Ignore node_modules and builds in portfolio subfolder
 portfolio/node_modules/
