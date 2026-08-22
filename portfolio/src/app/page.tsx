@@ -176,6 +176,37 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
+
+                {/* ── Resume CTA ── */}
+                <a
+                  href="/resume/Sudeep_Gupta_Resume.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-10 inline-flex items-center gap-3 rounded-full px-8 py-4 text-[11px] font-extrabold uppercase tracking-[0.22em] shadow-[0_6px_24px_rgba(0,0,0,0.12)] transition-all duration-300 hover:shadow-[0_10px_36px_rgba(0,0,0,0.20)] hover:scale-[1.03]"
+                  style={{
+                    backgroundColor: "#1e1e1e",
+                    color: "#f1d85f",
+                    border: "1px solid rgba(30,30,30,0.25)",
+                  }}
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="12" y1="18" x2="12" y2="12" />
+                    <polyline points="9 15 12 18 15 15" />
+                  </svg>
+                  Know more about me — Download Resume
+                </a>
               </div>
             </div>
           </div>
@@ -515,16 +546,16 @@ export default function Home() {
         </div>
 
         <div
-          className="mt-8 flex flex-col items-center justify-between gap-4 px-4 text-[10px] font-extrabold uppercase tracking-[0.3em] sm:flex-row"
-          style={{ color: "rgba(232,226,216,0.30)" }}
+          className="mt-8 flex flex-col items-center justify-between gap-6 px-4 sm:flex-row"
+          style={{ color: "rgba(232,226,216,0.55)" }}
         >
-          <p>Designed and built by Sudeep</p>
-          <div className="flex flex-wrap justify-center gap-6">
+          <p className="text-xs font-extrabold uppercase tracking-[0.3em]">Designed and built by Sudeep</p>
+          <div className="flex flex-wrap justify-center gap-8">
             <a
               href="https://www.linkedin.com/in/sudeep-g-217a7928b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[#f7f1ed]"
+              className="text-sm font-extrabold uppercase tracking-[0.2em] transition-colors hover:text-[#f7f1ed]"
             >
               LinkedIn
             </a>
@@ -532,7 +563,7 @@ export default function Home() {
               href="https://github.com/Sudeep-Gupta04"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[#f7f1ed]"
+              className="text-sm font-extrabold uppercase tracking-[0.2em] transition-colors hover:text-[#f7f1ed]"
             >
               GitHub
             </a>
@@ -540,7 +571,7 @@ export default function Home() {
               href="https://www.geeksforgeeks.org/profile/sudeepkguqd9b"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[#f7f1ed]"
+              className="text-sm font-extrabold uppercase tracking-[0.2em] transition-colors hover:text-[#f7f1ed]"
             >
               GFG
             </a>
@@ -548,13 +579,13 @@ export default function Home() {
               href="https://leetcode.com/u/Sudeep-Gupta04/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[#f7f1ed]"
+              className="text-sm font-extrabold uppercase tracking-[0.2em] transition-colors hover:text-[#f7f1ed]"
             >
               LeetCode
             </a>
             <a
               href="mailto:sudeepkgupta2001@gmail.com"
-              className="transition-colors hover:text-[#f7f1ed]"
+              className="text-sm font-extrabold uppercase tracking-[0.2em] transition-colors hover:text-[#f7f1ed]"
             >
               Email
             </a>

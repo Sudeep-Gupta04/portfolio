@@ -70,6 +70,7 @@ export default function HeroReveal({ shouldAnimate, isVisible }: HeroRevealProps
       >
         Based in Gandhinagar, Gujarat
       </motion.p>
+
     </motion.div>
   );
 }

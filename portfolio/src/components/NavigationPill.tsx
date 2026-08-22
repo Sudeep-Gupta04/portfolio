@@ -11,6 +11,7 @@ const menuLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
+  { label: "Get Resume", href: "/resume/Sudeep_Gupta_Resume.pdf", isDownload: true },
 ];
 
 export default function NavigationPill() {
@@ -119,26 +120,71 @@ export default function NavigationPill() {
               exit={{ opacity: 0, y: 10, scale: 0.96 }}
               transition={{ duration: 0.28, ease: [0.76, 0, 0.24, 1] }}
             >
-              {menuLinks.map((link, i) => (
-                <motion.button
-                  key={link.label}
-                  onClick={() => handleClick(link.href)}
-                  className="rounded-[0.9rem] px-5 py-3 text-left text-[13px] font-extrabold uppercase tracking-[0.22em] transition-colors duration-200"
-                  style={{
-                    color: isDark ? "rgba(232,226,216,0.65)" : "rgba(30,30,30,0.72)",
-                  }}
-                  whileHover={{
-                    backgroundColor: isDark ? "#f1d85f" : "#1e1e1e",
-                    color: isDark ? "#1e1e1e" : "#f7f1ed",
-                  }}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 4 }}
-                  transition={{ delay: i * 0.035, duration: 0.22 }}
-                >
-                  {link.label}
-                </motion.button>
-              ))}
+              {menuLinks.map((link, i) =>
+                link.isDownload ? (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="mt-1 flex items-center gap-2 rounded-[0.9rem] px-5 py-3 text-left text-[13px] font-extrabold uppercase tracking-[0.22em] transition-colors duration-200"
+                    style={{
+                      background: isDark
+                        ? "rgba(241,216,95,0.12)"
+                        : "rgba(30,30,30,0.06)",
+                      color: isDark ? "#f1d85f" : "#1e1e1e",
+                      borderTop: isDark
+                        ? "1px solid rgba(232,226,216,0.08)"
+                        : "1px solid rgba(30,30,30,0.08)",
+                    }}
+                    whileHover={{
+                      backgroundColor: isDark ? "#f1d85f" : "#1e1e1e",
+                      color: isDark ? "#1e1e1e" : "#f7f1ed",
+                    }}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 4 }}
+                    transition={{ delay: i * 0.035, duration: 0.22 }}
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    {link.label}
+                  </motion.a>
+                ) : (
+                  <motion.button
+                    key={link.label}
+                    onClick={() => handleClick(link.href)}
+                    className="rounded-[0.9rem] px-5 py-3 text-left text-[13px] font-extrabold uppercase tracking-[0.22em] transition-colors duration-200"
+                    style={{
+                      color: isDark ? "rgba(232,226,216,0.65)" : "rgba(30,30,30,0.72)",
+                    }}
+                    whileHover={{
+                      backgroundColor: isDark ? "#f1d85f" : "#1e1e1e",
+                      color: isDark ? "#1e1e1e" : "#f7f1ed",
+                    }}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 4 }}
+                    transition={{ delay: i * 0.035, duration: 0.22 }}
+                  >
+                    {link.label}
+                  </motion.button>
+                ),
+              )}
             </motion.nav>
           )}
         </AnimatePresence>
